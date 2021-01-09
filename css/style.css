@@ -1,0 +1,142 @@
+@charset "UTF-8";
+html {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat',"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",  sans-serif;
+  color: #3E3E3E;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.section {
+  padding: 3.75em 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 3em 0;
+  }
+}
+
+.section__inner {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0 40px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .section__inner {
+    padding: 0 1em;
+  }
+}
+
+.section__inner--large {
+  max-width: 1200px;
+}
+
+.section__inner--small {
+  max-width: 960px;
+}
+
+.section__title {
+  font-size: 2.25em;
+  line-height: 1.2222;
+  margin-bottom: 1.6em;
+}
+
+@media screen and (max-width: 767px) {
+  .section__title {
+    font-size: 1.875em;
+    line-height: 1.3333;
+    margin-bottom: 1.2em;
+  }
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-weight: bold;
+}
+
+.button--large {
+  font-size: 1.25em;
+  line-height: 1.125;
+  padding: 1em 4em;
+  letter-spacing: 4px;
+}
+
+.button--small {
+  font-size: 1.125em;
+  line-height: 1.625;
+  padding: 0.75em 2.8em;
+  letter-spacing: 0.45px;
+}
+
+.button--bg_primary {
+  background: #3E3E3E;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+}
+
+.button--bg_yellow {
+  background: #FFAA3B;
+  color: #fff;
+}
+
+.button--color_primary {
+  background: #fff;
+  color: #3E3E3E;
+  border: 1px solid #3E3E3E;
+}
+
+.button--border_radius {
+  border-radius: 10px;
+}
+
+.button--left {
+  text-align-last: left;
+}
+
+.button--right {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .is-sp {
+    display: none;
+  }
+}
+
+.op-0 {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.op-1 {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
