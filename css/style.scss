@@ -19,7 +19,7 @@ body{
     width: 100%;
     height: 100%;
     line-height: 1.5;
-    overflow: hidden;
+    background: #F3F3F3;
 }
 
 img{
@@ -189,3 +189,198 @@ $layer: (
   floating: 30,
   default: 1
 );
+
+
+// =======================
+//  header
+// =======================
+
+.header{
+    // position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    padding: 2em 0;
+    width: 100%;
+
+    @include mq('sp'){
+        padding: 1.3em 0;
+    }
+}
+
+.header__inner{
+    box-sizing: content-box;
+    padding: 0 1em;
+    margin: 0 auto;
+
+    @include mq('sp'){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq('sp'){
+        display: none;
+    }
+}
+
+.header__item{
+    margin-right: 40px;
+    
+    &:last-of-type{
+        margin-right: 0;
+    }
+}
+
+.header__link{
+    display: block;
+    font-size: 1em;
+    line-height: 1.1875;
+    letter-spacing: -0.4px;
+    font-weight: bold;
+}
+
+.header__link--first-letter_big{
+    text-transform: capitalize;
+}
+
+.header__logo{
+    font-size: 1.4375em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+// ハンバーガーメニュー
+.hamberger{
+    z-index: 120;
+    display: none;
+
+    @include mq('sp'){
+        display: block;
+    }
+
+}
+
+.hamberger__line-wrapper {
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 200;
+    transform: translateX(0);
+    transition: transform .5s;
+
+    &.open{
+        transform: translateX(-40vw);
+    }
+}
+
+.hamberger__line {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $primary-color;
+    transition: all .5s;
+    border-radius: 5px;
+}
+
+.hamberger__line:nth-of-type(1) {
+    top: 0;
+}
+
+.hamberger__line-wrap.open .hamberger__line:nth-of-type(1) {
+    transform: translateY(12px) rotate(-45deg);
+}
+
+.hamberger__line:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamberger__line-wrap.open .hamberger__line:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamberger__line:nth-of-type(3) {
+    bottom: 0;
+}
+
+.hamberger__line-wrap.open .hamberger__line:nth-of-type(3) {
+    transform:  translateY(-12px) rotate(45deg);
+}
+
+.hamberger-menu{
+    width: 40vw;
+    height: 100%;
+    background-color: $primary-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 300;
+    transform: translateX(100%);
+    transition: all .5s;
+}
+
+.hamberger-menu.open {
+    transform: translateX(0);
+}
+
+.hamberger-menu__item {
+    padding: .2em 0;
+    border-bottom: 1px solid #707070;
+    display: -webkit-box; /* safari, Chrome */
+    display: -moz-box;    /* Firefox */
+    display: -o-box;      /* Opera */
+    display: -ms-box;     /* IE */
+    display: box;         /* ベンダープレフィックスなし */
+    -webkit-box-align: center; /* safari, Chrome */
+    -moz-box-align: center;    /* Firefox */
+    -o-box-align: center;      /* Opera */
+    -ms-box-align: center;     /* IE */
+    box-align: center;         /* ベンダープレフィックスなし */
+
+}
+
+.hamberger-menu__link{
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding: .8em 0 1em .8em;
+}
+
+.overlay{
+    background: #000000CC;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity ease 0.5s;
+    z-index: -10;
+}
+
+.overlay.open{
+    opacity: 1;
+    z-index: 110;
+}
+
+
+
+
+// メニュー開いたときに背景固定
+body.fixed{
+    width: 100%;
+    overflow-y: hidden;
+}
+
