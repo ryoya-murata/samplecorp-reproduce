@@ -145,7 +145,11 @@ $breakpoints: (
 }
 
 .button--left{
-    text-align-last: left;
+    text-align: left;
+
+    @include mq('sp'){
+        text-align: center;
+    }
 }
 
 .button--right{
@@ -406,11 +410,19 @@ body.fixed{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+
+    @include mq('sp'){
+        padding: 0 1em;
+    }
 }
 
 .top__contents{
     width: 50%;
     margin-left: auto;
+
+    @include  mq('sp'){
+        width: 100%;
+    }
 }
 
 .top__title{
@@ -419,11 +431,19 @@ body.fixed{
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 0.02px;
+
+    @include mq('sp'){
+        font-size: 1.5em;
+    }
 }
 
 .top__desc{
     font-size: 1.125em;
     margin-bottom: 2em;
     font-weight: bold;
+
+    @include mq('sp'){
+        font-size: 0.875em;
+    }
 }
 
