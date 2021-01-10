@@ -147,6 +147,7 @@ img {
   background: transparent;
   padding: 2em 0;
   width: 100%;
+  z-index: 100;
 }
 
 @media screen and (max-width: 767px) {
@@ -221,8 +222,9 @@ img {
 }
 
 .hamberger {
-  z-index: 120;
+  z-index: 200;
   display: none;
+  height: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -236,7 +238,6 @@ img {
   width: 26px;
   height: 20px;
   cursor: pointer;
-  z-index: 200;
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: -webkit-transform .5s;
@@ -246,8 +247,12 @@ img {
 }
 
 .hamberger__line-wrapper.open {
-  -webkit-transform: translateX(-40vw);
-          transform: translateX(-40vw);
+  -webkit-transform: translateX(-190px);
+          transform: translateX(-190px);
+}
+
+.hamberger__line-wrapper.open .hamberger__line {
+  background-color: #fff;
 }
 
 .hamberger__line {
@@ -268,9 +273,9 @@ img {
   top: 0;
 }
 
-.hamberger__line-wrap.open .hamberger__line:nth-of-type(1) {
-  -webkit-transform: translateY(12px) rotate(-45deg);
-          transform: translateY(12px) rotate(-45deg);
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(1) {
+  -webkit-transform: translateY(8px) rotate(-45deg);
+          transform: translateY(8px) rotate(-45deg);
 }
 
 .hamberger__line:nth-of-type(2) {
@@ -279,7 +284,7 @@ img {
           transform: translateY(-50%);
 }
 
-.hamberger__line-wrap.open .hamberger__line:nth-of-type(2) {
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(2) {
   opacity: 0;
 }
 
@@ -287,13 +292,13 @@ img {
   bottom: 0;
 }
 
-.hamberger__line-wrap.open .hamberger__line:nth-of-type(3) {
-  -webkit-transform: translateY(-12px) rotate(45deg);
-          transform: translateY(-12px) rotate(45deg);
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(3) {
+  -webkit-transform: translateY(-8px) rotate(45deg);
+          transform: translateY(-8px) rotate(45deg);
 }
 
 .hamberger-menu {
-  width: 40vw;
+  width: 200px;
   height: 100%;
   background-color: #3E3E3E;
   position: fixed;
@@ -356,8 +361,8 @@ img {
 }
 
 .overlay.open {
-  opacity: 1;
-  z-index: 110;
+  opacity: .8;
+  z-index: 150;
 }
 
 body.fixed {

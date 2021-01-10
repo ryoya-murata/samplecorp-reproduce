@@ -203,6 +203,7 @@ $layer: (
     background: transparent;
     padding: 2em 0;
     width: 100%;
+    z-index: map-get($layer, header);
 
     @include mq('sp'){
         padding: 1.3em 0;
@@ -259,8 +260,9 @@ $layer: (
 
 // ハンバーガーメニュー
 .hamberger{
-    z-index: 120;
+    z-index: 200;
     display: none;
+    height: 20px;
 
     @include mq('sp'){
         display: block;
@@ -273,12 +275,15 @@ $layer: (
     width: 26px;
     height: 20px;
     cursor: pointer;
-    z-index: 200;
     transform: translateX(0);
     transition: transform .5s;
 
     &.open{
-        transform: translateX(-40vw);
+        transform: translateX(-190px);
+
+        .hamberger__line{
+            background-color: #fff;
+        }
     }
 }
 
@@ -298,8 +303,8 @@ $layer: (
     top: 0;
 }
 
-.hamberger__line-wrap.open .hamberger__line:nth-of-type(1) {
-    transform: translateY(12px) rotate(-45deg);
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(1) {
+    transform: translateY(8px) rotate(-45deg);
 }
 
 .hamberger__line:nth-of-type(2) {
@@ -307,7 +312,7 @@ $layer: (
     transform: translateY(-50%);
 }
 
-.hamberger__line-wrap.open .hamberger__line:nth-of-type(2) {
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(2) {
     opacity: 0;
 }
 
@@ -315,12 +320,12 @@ $layer: (
     bottom: 0;
 }
 
-.hamberger__line-wrap.open .hamberger__line:nth-of-type(3) {
-    transform:  translateY(-12px) rotate(45deg);
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(3) {
+    transform:  translateY(-8px) rotate(45deg);
 }
 
 .hamberger-menu{
-    width: 40vw;
+    width: 200px;
     height: 100%;
     background-color: $primary-color;
     position: fixed;
@@ -371,8 +376,8 @@ $layer: (
 }
 
 .overlay.open{
-    opacity: 1;
-    z-index: 110;
+    opacity: .8;
+    z-index: 150;
 }
 
 
