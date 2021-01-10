@@ -666,6 +666,35 @@ body.fixed {
   font-size: 0.875em;
 }
 
+.price__table {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #CECDCD;
+  border-collapse: collapse;
+  background: #fff;
+  margin-bottom: 0.75em;
+}
+
+.price-table__header, .price-table__data {
+  padding: 0.7em 1.67em;
+  border: 1px solid #CECDCD;
+  vertical-align: middle;
+  font-size: 1.5em;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.price-table__header {
+  background: #3E3E3E;
+  color: #fff;
+  text-align: center;
+  width: 260px;
+}
+
+.price__desc {
+  font-size: 0.75em;
+}
+
 .access__contents-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
