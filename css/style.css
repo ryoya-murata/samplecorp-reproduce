@@ -684,11 +684,24 @@ body.fixed {
   font-weight: bold;
 }
 
+@media screen and (max-width: 767px) {
+  .price-table__header, .price-table__data {
+    font-size: 1.25em;
+    padding: 0.8em 1em;
+  }
+}
+
 .price-table__header {
   background: #3E3E3E;
   color: #fff;
   text-align: center;
   width: 260px;
+}
+
+@media screen and (max-width: 767px) {
+  .price-table__header {
+    width: 100px;
+  }
 }
 
 .price__desc {

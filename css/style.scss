@@ -671,6 +671,11 @@ body.fixed{
     font-size: 1.5em;
     line-height: 1.2;
     font-weight: bold;
+
+    @include mq('sp'){
+        font-size: 1.25em;
+        padding: 0.8em 1em;
+    }
 }
 
 .price-table__header{
@@ -678,6 +683,10 @@ body.fixed{
     color: #fff;
     text-align: center;
     width: 260px;
+
+    @include mq('sp'){
+        width: 100px;
+    }
 }
 
 .price__desc{
