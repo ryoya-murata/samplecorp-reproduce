@@ -6,42 +6,61 @@
     <title>Sample Corp</title>
     <!-- fontawesome -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- destyle.css -->
+    <link rel="stylesheet" href="./css/destyle.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
     <!-- header -->
     <header class="header">
-        <ul class="header__menu">
-            <li class="header__item"><a href="#news" class="header__link header__link--first-letter_big">news</a><!-- /.header__link --></li><!-- /.header__item -->
-            <li class="header__item"><a href="#service" class="header__link header__link--first-letter_big">service</a><!-- /.header__link --></li><!-- /.header__item -->
-            <li class="header__item"><a href="#results" class="header__link header__link--first-letter_big">results</a><!-- /.header__link --></li><!-- /.header__item -->
-            <li class="header__item"><a href="#price" class="header__link header__link--first-letter_big">price</a><!-- /.header__link --></li><!-- /.header__item -->
-            <li class="header__item"><a href="#comments" class="header__link header__link--first-letter_big">comments</a><!-- /.header__link --></li><!-- /.header__item -->
-            <li class="header__item"><a href="#faqs" class="header__link">FAQs</a><!-- /.header__link --></li><!-- /.header__item -->
-            <li class="header__item"><a href="#contact" class="header__link header__link--first-letter_big">contact</a><!-- /.header__link --></li><!-- /.header__item -->
-        </ul><!-- /.header__menu -->
+        <div class="header__inner">
+            <ul class="header__menu is-pc">
+                <li class="header__item"><a href="#news" class="header__link header__link--first-letter_big">news</a><!-- /.header__link --></li><!-- /.header__item -->
+                <li class="header__item"><a href="#service" class="header__link header__link--first-letter_big">service</a><!-- /.header__link --></li><!-- /.header__item -->
+                <li class="header__item"><a href="#results" class="header__link header__link--first-letter_big">results</a><!-- /.header__link --></li><!-- /.header__item -->
+                <li class="header__item"><a href="#price" class="header__link header__link--first-letter_big">price</a><!-- /.header__link --></li><!-- /.header__item -->
+                <li class="header__item"><a href="#comments" class="header__link header__link--first-letter_big">comments</a><!-- /.header__link --></li><!-- /.header__item -->
+                <li class="header__item"><a href="#faqs" class="header__link">FAQs</a><!-- /.header__link --></li><!-- /.header__item -->
+                <li class="header__item"><a href="#contact" class="header__link header__link--first-letter_big">contact</a><!-- /.header__link --></li><!-- /.header__item -->
+            </ul><!-- /.header__menu -->
 
-        <!-- hamberger -->
-        <div class="hamberger is-sp" >          
-            <div class="hamberger__line-wrap">
-                <span class="hamberger__line"></span>
-                <span class="hamberger__line"></span>
-                <span class="hamberger__line"></span>
+            <!-- logo -->
+            <div class="header__logo-wrapper is-sp">
+                <h2 class="header__logo">Sample Corp.</h2><!-- /.header__logo -->
+            </div><!-- /.header__logo-wrapper -->
+    
+            <!-- hamberger -->
+            <div class="hamberger is-sp" >          
+                <div class="hamberger__line-wrapper">
+                    <span class="hamberger__line"></span>
+                    <span class="hamberger__line"></span>
+                    <span class="hamberger__line"></span>
+                </div>
+    
+                
             </div>
-
-            <nav class="hamberger-menu">
-                <ul class="hamberger-menu__list">
-                    <li class="hamberger-menu__item"><a href="#news" class=" hamberger-menu__link header__link header__link--first-letter_big">news</a><!-- /. --></li><!-- /.header__item -->
-                    <li class="hamberger-menu__item"><a href="#service" class=" hamberger-menu__link header__link header__link--first-letter_big">service</a></li><!-- /.header__item -->
-                    <li class="hamberger-menu__item"><a href="#reslts" class=" hamberger-menu__link header__link header__link--first-letter_big">reslts</a></li><!-- /.header__item -->
-                    <li class="hamberger-menu__item"><a href="#price" class=" hamberger-menu__link header__link header__link--first-letter_big">price</a></li><!-- /.header__item -->
-                    <li class="hamberger-menu__item"><a href="#comments" class=" hamberger-menu__link header__link header__link--first-letter_big">comments</a></li><!-- /.header__item -->
-                    <li class="hamberger-menu__item"><a href="#>FAQS" class=" hamberger-menu__link">FAQS</a></li><!-- /.header__item -->
-                    <li class="hamberger-menu__item"><a href="#contact" class=" hamberger-menu__link header__link header__link--first-letter_big">contact</a></li><!-- /.header__item -->
-                </ul><!-- /.header__list -->
-            </nav>
-
-        </div>
+        </div><!-- /.header__inner -->
     </header><!-- /.header -->
+
+    <nav class="hamberger-menu">
+        <ul class="hamberger-menu__list">
+            <li class="hamberger-menu__item"><a href="#news" class=" hamberger-menu__link header__link header__link--first-letter_big">news</a><!-- /. --></li><!-- /.header__item -->
+            <li class="hamberger-menu__item"><a href="#service" class=" hamberger-menu__link header__link header__link--first-letter_big">service</a></li><!-- /.header__item -->
+            <li class="hamberger-menu__item"><a href="#reslts" class=" hamberger-menu__link header__link header__link--first-letter_big">reslts</a></li><!-- /.header__item -->
+            <li class="hamberger-menu__item"><a href="#price" class=" hamberger-menu__link header__link header__link--first-letter_big">price</a></li><!-- /.header__item -->
+            <li class="hamberger-menu__item"><a href="#comments" class=" hamberger-menu__link header__link header__link--first-letter_big">comments</a></li><!-- /.header__item -->
+            <li class="hamberger-menu__item"><a href="#>FAQS" class=" hamberger-menu__link  header__link">FAQS</a></li><!-- /.header__item -->
+            <li class="hamberger-menu__item"><a href="#contact" class=" hamberger-menu__link header__link header__link--first-letter_big">contact</a></li><!-- /.header__item -->
+        </ul><!-- /.header__list -->
+    </nav>
+
+    <div class="overlay"></div><!-- /.overlay -->
+
 
     
 
@@ -54,7 +73,7 @@
                 <h1 class="top__title">詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</h1><!-- /.top__title -->
                 <p class="top__desc">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p><!-- /.top__desc -->
                 <div class="top__button-wrapper button--left">
-                    <a href="#contact" class="button button--bg_yellow button--small">お問い合わせしてみる</a><!-- /.button button--bg_yellow button--size_small -->
+                    <a href="#contact" class="button button--bg_yellow button--small button--border_radius">お問い合わせしてみる</a><!-- /.button button--bg_yellow button--size_small -->
                 </div><!-- /.top__button-wrapper button--left -->
             </div><!-- /.top__contents -->
         </div><!-- /.top__inner -->
@@ -385,7 +404,7 @@
                                 <label for="agree" class="form__agree-label"><span class="form__agree-caution">個人情報保護方針に同意する</label><!-- /.form__agree-label -->
                             </div><!-- /.form__agree-wrapper -->
                             <div class="form__button-wrapper button--left">
-                                <button href="#" type="submit" class="button button--small button--bg_yellow">送信する</button><!-- /.button button--small button--bg_yellow -->
+                                <button href="#" type="submit" class="button button--small button--bg_yellow button--border_radius">送信する</button><!-- /.button button--small button--bg_yellow -->
                             </div><!-- /.form__button-wrapper button--left -->
                         </div><!-- /.form__items -->
                     </div><!-- /.form__inner -->
@@ -425,5 +444,11 @@
     <div class="totop-button-wrapper">
         <a href="#" class="tootp-button button"><img src="./img/totop.svg" alt="トップへ" class="totop-button__img"></a><!-- /.tootp-button -->
     </div><!-- /.totop-button-wrapper -->
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- my js -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

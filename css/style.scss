@@ -1,0 +1,391 @@
+@charset "utf-8";
+
+$font-color: #3E3E3E;
+$primary-color: #3E3E3E;
+$border-color: #CECDCD;
+$color-blue: #3B69FF;
+$color-yellow: #FFAA3B;
+$color-red: #FF4646;
+
+html{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: 'Montserrat',"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",  sans-serif;
+    color:$font-color;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    background: #F3F3F3;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+
+
+
+// =======================
+//  メディアクエリ
+// =======================
+
+$inner-width-large: 1200px;
+$inner-width-small: 960px;
+
+
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "pc": "screen and (min-width: 768px)"
+);
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+  
+
+// =======================
+//  共通部分
+// =======================
+
+
+.section{
+    padding: 3.75em 0;
+    width: 100%;
+
+    @include mq('sp'){
+        padding: 3em 0;
+    }
+}
+
+.section__inner{
+    box-sizing: content-box;
+    padding: 0 40px;
+    margin: 0 auto;
+    width: 100%;
+
+    @include mq("sp"){
+        padding: 0 1em;
+    }
+}
+
+.section__inner--large{
+    max-width: $inner-width-large;
+}
+
+.section__inner--small{
+    max-width: $inner-width-small;
+}
+
+
+
+.section__title{
+    font-size: 2.25em;
+    line-height: 1.2222;
+    margin-bottom: 1.6em;
+
+   
+
+    @include mq('sp'){
+        font-size: 1.875em;
+        line-height: 1.3333;
+        margin-bottom: 1.2em;
+    }
+}
+
+
+.button{
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+    font-weight: bold;
+}
+
+.button--large{
+    font-size: 1.25em;
+    line-height: 1.125;
+    padding: 1em 4em;
+    letter-spacing: 4px;
+}
+
+.button--small{
+    font-size: 1.125em;
+    line-height: 1.625;
+    padding: 0.75em 2.8em;
+    letter-spacing: 0.45px;
+}
+
+.button--bg_primary{
+    background: $primary-color;
+    color: #fff;
+    border: 1px solid #FFFFFF;
+}
+
+.button--bg_yellow{
+    background: $color-yellow;
+    color: #fff;
+}
+
+.button--color_primary{
+    background: #fff;
+    color: $font-color;
+    border: 1px solid $primary-color;
+}
+
+.button--border_radius{
+    border-radius: 10px;
+}
+
+.button--left{
+    text-align-last: left;
+}
+
+.button--right{
+    text-align: center;
+}
+
+.is-pc{
+    @include mq('sp'){
+        display: none;
+    }
+}
+
+.is-sp{
+    @include mq('pc'){
+        display: none;
+    }
+}
+
+.op-0{
+    opacity: 0;
+    transition: all .5s;
+}
+
+.op-1{
+    opacity: 1;
+}
+
+
+
+
+
+
+// =======================
+//  z-index
+// =======================
+
+$layer: (
+  header: 100,
+  modal: 80,
+  drawer: 40,
+  sp-menu: 35,
+  floating: 30,
+  default: 1
+);
+
+
+// =======================
+//  header
+// =======================
+
+.header{
+    // position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    padding: 2em 0;
+    width: 100%;
+    z-index: map-get($layer, header);
+
+    @include mq('sp'){
+        padding: 1.3em 0;
+    }
+}
+
+.header__inner{
+    box-sizing: content-box;
+    padding: 0 1em;
+    margin: 0 auto;
+
+    @include mq('sp'){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq('sp'){
+        display: none;
+    }
+}
+
+.header__item{
+    margin-right: 40px;
+    
+    &:last-of-type{
+        margin-right: 0;
+    }
+}
+
+.header__link{
+    display: block;
+    font-size: 1em;
+    line-height: 1.1875;
+    letter-spacing: -0.4px;
+    font-weight: bold;
+}
+
+.header__link--first-letter_big{
+    text-transform: capitalize;
+}
+
+.header__logo{
+    font-size: 1.4375em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+// ハンバーガーメニュー
+.hamberger{
+    z-index: 200;
+    display: none;
+    height: 20px;
+
+    @include mq('sp'){
+        display: block;
+    }
+
+}
+
+.hamberger__line-wrapper {
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    transform: translateX(0);
+    transition: transform .5s;
+
+    &.open{
+        transform: translateX(-190px);
+
+        .hamberger__line{
+            background-color: #fff;
+        }
+    }
+}
+
+.hamberger__line {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $primary-color;
+    transition: all .5s;
+    border-radius: 5px;
+}
+
+.hamberger__line:nth-of-type(1) {
+    top: 0;
+}
+
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.hamberger__line:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamberger__line:nth-of-type(3) {
+    bottom: 0;
+}
+
+.hamberger__line-wrapper.open .hamberger__line:nth-of-type(3) {
+    transform:  translateY(-8px) rotate(45deg);
+}
+
+.hamberger-menu{
+    width: 200px;
+    height: 100%;
+    background-color: $primary-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 300;
+    transform: translateX(100%);
+    transition: all .5s;
+}
+
+.hamberger-menu.open {
+    transform: translateX(0);
+}
+
+.hamberger-menu__item {
+    padding: .2em 0;
+    border-bottom: 1px solid #707070;
+    display: -webkit-box; /* safari, Chrome */
+    display: -moz-box;    /* Firefox */
+    display: -o-box;      /* Opera */
+    display: -ms-box;     /* IE */
+    display: box;         /* ベンダープレフィックスなし */
+    -webkit-box-align: center; /* safari, Chrome */
+    -moz-box-align: center;    /* Firefox */
+    -o-box-align: center;      /* Opera */
+    -ms-box-align: center;     /* IE */
+    box-align: center;         /* ベンダープレフィックスなし */
+
+}
+
+.hamberger-menu__link{
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding: .8em 0 1em .8em;
+}
+
+.overlay{
+    background: #000000CC;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity ease 0.5s;
+    z-index: -10;
+}
+
+.overlay.open{
+    opacity: .8;
+    z-index: 150;
+}
+
+
+
+
+// メニュー開いたときに背景固定
+body.fixed{
+    width: 100%;
+    overflow-y: hidden;
+}
+
