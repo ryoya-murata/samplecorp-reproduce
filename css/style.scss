@@ -591,6 +591,10 @@ body.fixed{
 
 .service{
     background:linear-gradient(180deg, $primary-color 0%,$primary-color 70%,transparent 70%,transparent 100%);
+
+    @include mq('sp'){
+    background:linear-gradient(180deg, $primary-color 0%,$primary-color 50%,transparent 50%,transparent 100%);
+    }
 }
 
 .service__items{
@@ -598,6 +602,11 @@ body.fixed{
     padding: 3.75em 2.8em;
     display: flex;
     box-shadow: 0px 5px 12px #3E3E3E33;
+
+    @include mq('sp'){
+        padding: 2.5em 1em;
+        display: block;
+    }
 }
 
 .service__item{
@@ -606,6 +615,12 @@ body.fixed{
 
     &:last-of-type{
         margin-right: 0;
+    }
+
+    @include mq('sp'){
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 2.5em;
     }
 }
 
@@ -633,6 +648,7 @@ body.fixed{
 
 .service-item__desc{
     font-size: 0.875em;
+
 }
 
 // =======================
