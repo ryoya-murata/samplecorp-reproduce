@@ -775,12 +775,20 @@ body.fixed{
 .faqs__items{
     width: 51%;
     margin-left: auto;
+
+    @include mq('sp'){
+        width: 100%;
+    }
 }
 
 .faq-item{
     margin-bottom: 2em;
     background: #fff;
     border-radius: 4px;
+
+    @include mq('sp'){
+        margin-bottom: 1.5em;
+    }
 }
 
 .faq-item__question-wrapper{
