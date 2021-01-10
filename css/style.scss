@@ -89,7 +89,7 @@ $breakpoints: (
     font-size: 2.25em;
     line-height: 1.2222;
     margin-bottom: 1.6em;
-
+    font-weight: bold;
    
 
     @include mq('sp'){
@@ -171,7 +171,7 @@ $breakpoints: (
     }
 }
 
-.button--right{
+.button--center{
     text-align: center;
 }
 
@@ -462,6 +462,126 @@ body.fixed{
 
     @include mq('sp'){
         font-size: 0.875em;
+    }
+}
+
+// =======================
+//  news
+// =======================
+
+.news{
+
+    @include mq('sp'){
+        margin-top: -6.25em;
+    }
+}
+
+.news__container{
+    background: #fff;
+    padding: 3.5em 3.75em 2.5em;
+    width: 100%;
+    box-shadow: 0px 5px 12px #3E3E3E33;
+
+    @include mq('sp'){
+        padding: 2.5em 0 ;
+    }
+}
+
+.news__items{
+    margin-bottom: 2.5em;
+}
+
+.news__item{
+    border-bottom: 1px solid $border-color;
+
+    &:first-of-type{
+        border-top: 1px solid $border-color;
+    }
+
+}
+
+.news-item__link{
+    display: block;
+    padding: 2em 5.2em 2em 0;
+    position: relative;
+    transition: all .3s;
+
+    &::after{
+        position: absolute;
+        content: url(../img/news-arrow-1.svg);
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    &:hover{
+        background: rgba(165, 195, 252, 0.5);
+    }
+
+    @include mq('sp'){
+        padding: 0.875em 3.4em 0.875em 1em;
+    }
+}
+
+.news-item__contents{
+    display: flex;
+    align-items: center;
+
+    @include mq('sp'){
+        display: block;
+    }
+}
+
+.news-item__heads{
+    display: flex;
+    align-items: center;
+    margin-right: 2.5em;
+
+    @include mq('sp'){
+        margin-bottom: 0.75em;
+        margin-right: 0;
+    }
+}
+
+.news-item__time-wrapper{
+    width: 100px;
+    margin-right: 2.5em;
+
+    @include mq('sp'){
+        margin-right: 1.5em;
+    }
+}
+
+.news-item__time{
+    font-size: 1.125em;
+    display: block;
+    letter-spacing: 0.45px;
+
+    @include mq('sp'){
+        font-size: 0.875em;
+    }
+}
+
+.news-item__title{
+    width: 120px;
+    font-size: 0.875em;
+    text-align: center;
+    padding: 0.15em 2em ;
+    border: 2px solid $color-blue;
+    border-radius: 50px;
+
+    @include mq('sp'){
+        font-size: 0.75em;
+    }
+}
+
+.news-item__content{
+    flex: 0 2 calc(100% - 260px);
+    font-weight: 1.125em;
+
+    @include mq('sp'){
+        font-size: 0.875em;
+        width: 100%;
     }
 }
 
