@@ -36,3 +36,24 @@ $(function () {
         }
     });
 });
+
+
+// ===========
+// faqs
+// ===========
+
+$(function(){
+    $(".faq-item__question-wrapper").on("click", function(){
+        $(this).next().slideToggle();
+        var faqIcon = $(this).find(".faq-item__icon");
+        
+
+        if(faqIcon.hasClass('selected')){
+            faqIcon.removeClass('selected');
+            faqIcon.attr('src', '../img/plus.svg');
+        } else {
+            faqIcon.addClass('selected');
+            faqIcon.attr('src', '../img/minus.svg');
+        }
+    })
+})
