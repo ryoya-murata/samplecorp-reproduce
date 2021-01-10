@@ -762,6 +762,77 @@ body.fixed{
 .comments__img-wrapper{
     flex: 0 1 44.5%;
 }
+
+// =======================
+//  faqs
+// =======================
+
+.faqs{
+    background: url(../img/qa-bg.png) no-repeat center /cover;
+    background-attachment: fixed;
+}
+
+.faqs__items{
+    width: 51%;
+    margin-left: auto;
+}
+
+.faq-item{
+    margin-bottom: 2em;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.faq-item__question-wrapper{
+    padding: 1em;
+    border-radius: 4px;
+}
+
+.faq-item__question{
+    padding-left: 35px;
+    padding-right: 20px;
+    font-weight: bold;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: "Q";
+        top: 50%;
+        left: 2px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        color: #fff;
+        background: $color-blue;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    
+}
+
+.faq-item__icon-wrapper{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.faq-item__icon{
+    vertical-align: middle;
+}
+
+.faq-item__answer-wrapper{
+    padding: 1em;
+    display: none;
+}
+
+.faq-item__answer{
+    padding: 1em;
+    background: #3B69FF33;
+    border-radius: 4px;
+}
+
 // =======================
 //  access
 // =======================
