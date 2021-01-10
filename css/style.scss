@@ -586,6 +586,72 @@ body.fixed{
 }
 
 // =======================
+//  service
+// =======================
+
+.service{
+    background:linear-gradient(180deg, $primary-color 0%,$primary-color 70%,transparent 70%,transparent 100%);
+
+    @include mq('sp'){
+    background:linear-gradient(180deg, $primary-color 0%,$primary-color 50%,transparent 50%,transparent 100%);
+    }
+}
+
+.service__items{
+    background: #fff;
+    padding: 3.75em 2.8em;
+    display: flex;
+    box-shadow: 0px 5px 12px #3E3E3E33;
+
+    @include mq('sp'){
+        padding: 2.5em 1em;
+        display: block;
+    }
+}
+
+.service__item{
+    flex: 0 1 calc(33.3333% - 60px);
+    margin-right: 5.625em;
+
+    &:last-of-type{
+        margin-right: 0;
+    }
+
+    @include mq('sp'){
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 2.5em;
+    }
+}
+
+
+
+.service-item__img-wrapper{
+    width: 45px;
+    margin: 0 auto 0.5em;
+
+}
+
+.service-item__img{
+    
+}
+
+.service-item__title{
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.service-item__desc{
+    font-size: 0.875em;
+
+}
+
+// =======================
 //  access
 // =======================
 
