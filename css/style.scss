@@ -700,13 +700,22 @@ body.fixed{
 .comments__wrapper{
     display: flex;
     align-items: center;
+
+    @include mq('sp'){
+        display: block;
+    }
 }
+
 
 .comments__box{
     flex: 0 1 55.5%;
     background: #fff;
     padding: 7.5em 3.75em;
     box-shadow: 0px 0px 10px #00000029;
+
+    @include mq('sp'){
+        padding: 2.5em 1.25em;
+    }
 }
 
 .comment-item{
@@ -722,6 +731,11 @@ body.fixed{
 .comment-item__img-element{
     flex: 0 1 100px;
     margin-right: 2em;
+
+    @include mq('sp'){
+        flex: 0 1 60px;
+        margin-right: 1.25em;
+    }
 }
 
 .comment-item__img-wrapper{
@@ -738,7 +752,11 @@ body.fixed{
 }
 
 .comment-item__comment-wrapper{
-    flex: 0 1 75.8%;
+    flex: 0 1 calc(100% - 132px);
+
+    @include mq('sp'){
+        flex: 0 1 calc(100% - 80px);
+    }
 }
 
 .comments__img-wrapper{
