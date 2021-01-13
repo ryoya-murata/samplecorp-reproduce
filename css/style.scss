@@ -1195,3 +1195,108 @@ opacity: 1;
     text-align: center;
     color: #ff0000;
 }
+
+// =======================
+//  footer
+// =======================
+
+.footer{
+    background-color: $primary-color;
+    color: #fff;
+    padding: 3.75em 0;
+}
+
+.footer__inner{
+    box-sizing: content-box;
+    padding: 0 1em;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.footer__container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mq('sp'){
+        display: block;
+        text-align: center;
+    }
+}
+
+.footer__sns-items{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;
+
+    @include mq('sp'){
+        justify-content: center;
+    }
+}
+
+.footer__sns-item{
+    margin-right: 2em;
+
+    &:last-of-type{
+        margin-right: 0;
+    }
+}
+
+.footer__sns-link{
+    display: block;
+}
+
+.footer__sns-icon{
+    opacity: .6;
+}
+
+.footer__menu{
+    
+    @include mq('sp'){
+        margin-bottom: 2.5em;
+    }
+}
+
+.footer__item{
+    margin-bottom: 1em;
+    letter-spacing: .4px;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    @include mq('sp'){
+        margin-bottom: 1.25em;
+    }
+}
+
+.footer__link{
+
+    @include mq('sp'){
+        font-size: 0.875em;
+    }
+}
+
+.footer__heading{
+    text-align: right;
+
+    @include mq('sp'){
+        text-align: center;
+    }
+}
+
+.footer__name{
+    font-size: 2.5em;
+    color: #E3E3E3;
+    font-weight: bold;
+
+    @include mq('sp'){
+        font-size: 2em;
+    }
+}
+
+.footer__copyright{
+    font-size: 0.75em;
+    opacity: .6;
+}
+
