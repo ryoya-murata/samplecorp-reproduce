@@ -1395,4 +1395,17 @@ body.fixed {
   font-size: 0.75em;
   opacity: .6;
 }
+
+.totop-button-wrapper {
+  position: fixed;
+  right: 2.5em;
+  bottom: 2.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .totop-button-wrapper {
+    right: 1em;
+    bottom: 0.81em;
+  }
+}
 /*# sourceMappingURL=style.css.map */
