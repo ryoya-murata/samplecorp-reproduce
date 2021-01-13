@@ -1177,3 +1177,21 @@ opacity: 1;
         width: 14px;
     }
 }
+
+
+.form__end-message{
+    display: none;
+    padding: 1em 0;
+    background: #f8f9fa;
+    font-size: 1.125em;
+    text-align: center;
+}
+
+.form__false-message{
+    display: none;
+    padding: 1em 0;
+    background: #f8f9fa;
+    font-size: 1.125em;
+    text-align: center;
+    color: #ff0000;
+}

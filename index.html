@@ -362,7 +362,7 @@
                                 </div><!-- /.form-item__label-wrapper -->
                                 <div class="form-item__input-wrapper">
                                     <select name="entry.382361412" id="inquiry" class="form-item__pull-down">
-                                        <option value="選択肢1" class="form-item__pull-down-item">選択してください</option><!-- /.form-item__pull-down-item -->
+                                        <option value="選択してください" class="form-item__pull-down-item" selected>選択してください</option>/.form-item__pull-down-item
                                         <option value="選択肢1" class="form-item__pull-down-item">選択肢1</option><!-- /.form-item__pull-down-item -->
                                         <option value="選択肢2" class="form-item__pull-down-item">選択肢2</option><!-- /.form-item__pull-down-item -->
                                         <option value="選択肢3" class="form-item__pull-down-item">選択肢3</option><!-- /.form-item__pull-down-item -->
@@ -412,15 +412,21 @@
                                 </div><!-- /.form-item__input-wrapper -->
                             </div><!-- /.form__item form-item form-item--display_block-->
                             <div class="form__agree-wrapper">
-                                <input id="agree" type="checkbox" class="form__agree-input" name="entry.844593496" value="" required>
-                                <label for="agree" class="form__agree-label"><span class="form__agree-caution">個人情報保護方針に同意する</label><!-- /.form__agree-label -->
+                                <input id="agree" type="checkbox" class="form__agree-input" name="entry.844593496" value="個人情報保護方針に同意する" required>
+                                <label for="agree" class="form__agree-label"><span class="form__agree-caution">個人情報保護方針に同意する</span></label><!-- /.form__agree-label -->
                             </div><!-- /.form__agree-wrapper -->
                             <div class="form__button-wrapper button--left">
-                                <button href="#" type="submit" class="button button--small button--bg_yellow button--border_radius">送信する</button><!-- /.button button--small button--bg_yellow -->
+                                <input type="submit" class="button button--bg_yellow button--small button--border_radius" value="送信する">
                             </div><!-- /.form__button-wrapper button--left -->
                         </div><!-- /.form__items -->
                     </div><!-- /.form__inner -->
                 </div><!-- /.form__body -->
+                <div class="form__messages-wrap">
+                    <p class="form__end-message">お問い合わせありがとうございます
+                        <br>メッセージは正常に送信されました
+                    </p><!-- /.form__end-message -->
+                    <p class="form__false-message">※送信に失敗しました</p><!-- /.form__false-message -->
+                </div><!-- /.form__messages-wrap -->
             </form><!-- /#form.contact__form form -->
         </div><!-- /.section__inner section__inner--small -->
     </section><!-- /#contact.section contact -->
