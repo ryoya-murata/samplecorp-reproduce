@@ -57,3 +57,32 @@ $(function(){
         }
     })
 })
+
+
+// ==========
+// contact
+// ==========
+
+$(document).ready(function () {
+
+    $('#form').submit(function (event) {
+      var formData = $('#form').serialize();
+      $.ajax({
+        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMam3QgiVYJpvFjsOwep-l7Ns0vskS7oZnr-Ti0KCZQ2dnTQ/formResponse",
+        data: formData,
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+          0: function () {
+            $(".form__end-message").slideDown();
+            $(".form__body").fadeOut();
+          },
+          200: function () {
+            $(".form__false-message").slideDown();
+          }
+        }
+      });
+      event.preventDefault();
+    });
+
+  });

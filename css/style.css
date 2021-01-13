@@ -946,4 +946,332 @@ body.fixed {
   height: 100%;
   border: none;
 }
+
+.contact {
+  background: url(../img/contact-bg.png) no-repeat center/cover;
+  padding: 3.75em 0;
+}
+
+.form__heading {
+  background: url(../img/contact1.png) no-repeat center/cover;
+  padding: 3.75em 0;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.form__title {
+  margin-bottom: 0.4em;
+}
+
+.form__desc {
+  color: #fff;
+  text-align: center;
+}
+
+.form__body {
+  background: #fff;
+  padding: 3.75em 7.5em;
+  border-radius: 0 0 12px 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .form__body {
+    padding: 2.5em 0.75em;
+  }
+}
+
+.form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+@media screen and (max-width: 767px) {
+  .form-item {
+    display: block;
+  }
+}
+
+.form-item--display_block {
+  display: block;
+}
+
+.form-item__label-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 150px;
+          flex: 0 1 150px;
+  margin-right: 2.375em;
+}
+
+@media screen and (max-width: 767px) {
+  .form-item__label-wrapper {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+}
+
+.form-item__label {
+  font-weight: bold;
+}
+
+.form-item__label--required {
+  padding-right: 3.25em;
+  position: relative;
+}
+
+.form-item__label--required::after {
+  content: "必須";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+  background: #FF4646;
+  width: 40px;
+  text-align: center;
+  font-size: 0.75em;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.form-item__input-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% - 188px);
+          flex: 0 1 calc(100% - 188px);
+}
+
+.form-item__pull-down {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent url(https://haniwaman.com/wp/wp-content/uploads/2018/12/form-css-arrow.png) no-repeat center right 8px/16px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.4em 0.8em;
+  width: 178px;
+}
+
+@media screen and (max-width: 767px) {
+  .form-item__pull-down {
+    width: 100%;
+  }
+}
+
+.form-item__pull-down:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.form-item__pull-down::-ms-expand {
+  display: none;
+}
+
+.form-item__input {
+  width: 100%;
+  padding: .5em .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  height: 100%;
+  display: block;
+  border-bottom: 1px solid #CECDCD;
+}
+
+.form-item__input::-webkit-input-placeholder {
+  font-size: 0.875em;
+}
+
+.form-item__input:-ms-input-placeholder {
+  font-size: 0.875em;
+}
+
+.form-item__input::-ms-input-placeholder {
+  font-size: 0.875em;
+}
+
+.form-item__input::placeholder {
+  font-size: 0.875em;
+}
+
+@media screen and (max-width: 767px) {
+  .form-item__input {
+    padding: .2em 0;
+  }
+}
+
+.form-item__radio-wrapper {
+  margin-right: 2em;
+}
+
+.form-item__radio-wrapper:last-of-type {
+  margin-right: 0;
+}
+
+.form-item__radio {
+  display: none;
+}
+
+.form-item__radio-label {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0.2em 0;
+  padding: 0 0 0 1.2em;
+  position: relative;
+}
+
+.form-item__radio-label::before {
+  -webkit-transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+}
+
+.form-item__radio-label::after {
+  -webkit-transform: translateY(-50%);
+  background: #3B69FF;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  left: 3px;
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 6px;
+}
+
+.form-item__radio:checked + .form-item__radio-label::after {
+  opacity: 1;
+}
+
+.form-item__textarea {
+  width: 100%;
+  padding: .5em .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  height: 200px;
+  display: block;
+  border: 1px solid #707070;
+}
+
+@media screen and (max-width: 767px) {
+  .form-item__textarea {
+    height: 160px;
+  }
+}
+
+.form__agree-wrapper {
+  margin-bottom: 2.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .form__agree-wrapper {
+    margin-bottom: 1.5em;
+  }
+}
+
+.form__agree-input {
+  display: none;
+}
+
+.form__agree-input:checked + .form__agree-label::after {
+  opacity: 1;
+}
+
+.form__agree-label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+.form__agree-label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #707070;
+}
+
+@media screen and (max-width: 767px) {
+  .form__agree-label::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.form__agree-label::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  border-bottom: 2px solid #3B69FF;
+  border-left: 2px solid #3B69FF;
+  content: "";
+  display: block;
+  height: 8px;
+  left: 3px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 14px;
+}
+
+.form__end-message {
+  display: none;
+  padding: 1em 0;
+  background: #f8f9fa;
+  font-size: 1.125em;
+  text-align: center;
+}
+
+.form__false-message {
+  display: none;
+  padding: 1em 0;
+  background: #f8f9fa;
+  font-size: 1.125em;
+  text-align: center;
+  color: #ff0000;
+}
 /*# sourceMappingURL=style.css.map */
