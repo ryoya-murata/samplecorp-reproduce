@@ -1006,6 +1006,13 @@ body.fixed {
   margin-right: 2.375em;
 }
 
+@media screen and (max-width: 767px) {
+  .form-item__label-wrapper {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+}
+
 .form-item__label {
   font-weight: bold;
 }
@@ -1050,6 +1057,12 @@ body.fixed {
   font-size: 1em;
   padding: 0.4em 0.8em;
   width: 178px;
+}
+
+@media screen and (max-width: 767px) {
+  .form-item__pull-down {
+    width: 100%;
+  }
 }
 
 .form-item__pull-down:focus {
@@ -1175,6 +1188,12 @@ body.fixed {
   border: 1px solid #707070;
 }
 
+@media screen and (max-width: 767px) {
+  .form-item__textarea {
+    height: 160px;
+  }
+}
+
 .form__agree-wrapper {
   margin-bottom: 2.5em;
 }
@@ -1212,6 +1231,13 @@ body.fixed {
   height: 20px;
   background: #fff;
   border: 1px solid #707070;
+}
+
+@media screen and (max-width: 767px) {
+  .form__agree-label::before {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__agree-label::after {
