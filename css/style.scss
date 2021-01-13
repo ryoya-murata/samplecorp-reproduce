@@ -1300,3 +1300,18 @@ opacity: 1;
     opacity: .6;
 }
 
+
+// =======================
+//  totop
+// =======================
+
+.totop-button-wrapper{
+    position: fixed;
+    right: 2.5em;
+    bottom: 2.5em;
+
+    @include mq('sp'){
+        right: 1em;
+        bottom: 0.81em;
+    }
+}
