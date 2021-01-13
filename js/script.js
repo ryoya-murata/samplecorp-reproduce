@@ -86,3 +86,24 @@ $(document).ready(function () {
     });
 
   });
+
+// =======================
+//  totop
+// =======================
+
+  $(function(){
+    // windowsがスクロールされたときに以下の内容を実行
+    $(window).scroll(function(){    
+        // windowの現在のスクロール位置を取得
+        var scrollTop = $(window).scrollTop();
+        // 対象エリアの高さを取得
+        var areaHeight = $('.top').innerHeight();
+        
+        // 現在のスクロール位置が対象エリアより大きければ以下の内容を実行
+        if(scrollTop > areaHeight){
+            $(".totop-button-wrapper").fadeIn();
+        } else {
+            $(".totop-button-wrapper").fadeOut();
+        }
+    })
+})
