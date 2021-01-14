@@ -148,18 +148,36 @@ $breakpoints: (
     background: $primary-color;
     color: #fff;
     border: 1px solid #FFFFFF;
+    transition:  all .3s;
+
+    &:hover{
+        background: #fff;
+        color: $font-color;
+        border: 1px solid #707070;
+    }
 }
 
 .button--bg_yellow{
     background: $color-yellow;
     color: #fff;
     box-shadow: 0px 3px 5px #3E3E3E33;
+    transition:  all .3s;
+
+    &:hover{
+        background: #F18900;
+    }
 }
 
 .button--color_primary{
     background: #fff;
     color: $font-color;
     border: 1px solid $primary-color;
+    transition:  all .3s;
+
+    &:hover{
+        color: #fff;
+        background: $primary-color;
+    }
 }
 
 .button--border_radius{
@@ -274,6 +292,13 @@ $layer: (
     line-height: 1.1875;
     letter-spacing: -0.4px;
     font-weight: bold;
+    border: 1px solid transparent;
+    padding-bottom: 0.8px;
+    transition: all ease .3s;
+
+    &:hover{
+        border-bottom: 1px solid #3E3E3E;
+    }
 }
 
 .header__link--first-letter_big{
@@ -1188,7 +1213,7 @@ body.fixed{
     -webkit-appearance: none;
     appearance: none;
     background: transparent url(https://haniwaman.com/wp/wp-content/uploads/2018/12/form-css-arrow.png) no-repeat center right 8px/16px 16px;
-    border: 1px solid rgba(0, 0, 0, 0.16);
+    border: 1px solid#707070;
     border-radius: 0;
     color: inherit;
     cursor: pointer;
@@ -1196,14 +1221,19 @@ body.fixed{
     font-size: 1em;
     padding: 0.4em 0.8em;
     width: 178px;
+    transition: all .3s;
 
     @include mq('sp'){
         width: 100%;
     }
+
+    &:hover{
+        box-shadow: 0px 0px 5px  #4973FF80 ;
+    }
 }
 
 .form-item__pull-down:focus {
-    border: 1px solid rgba(0, 0, 0, 0.32);
+    border: 1px solid#707070;
     box-shadow: none;
     outline: none;
   }
@@ -1218,7 +1248,7 @@ body.fixed{
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
-	background-color: #fff;
+	background-color: transparent;
 	background-image: none;
 	color: inherit;
 	font-family: inherit;
@@ -1226,6 +1256,13 @@ body.fixed{
     height: 100%;
     display: block;
     border-bottom: 1px solid $border-color;
+    transition: all .3s;
+
+    &:hover{
+        border-bottom: 1px solid #4973FF;
+        box-shadow: 0px 5px 5px -5px #4973FF80;
+    }
+
 
     &::-webkit-input-placeholder{
         font-size: 0.875em;
@@ -1255,15 +1292,26 @@ body.fixed{
 .form-item__radio-wrapper{
     margin-right: 2em;
 
+    &:hover{
+        .form-item__radio-label::before{
+            border: 1px solid#4973FF;
+        }
+    }
+
+    &:active{
+        .form-item__radio-label::before{
+            background: #4973FF33;
+        }
+    }
+
+    
+
     &:last-of-type{
         margin-right: 0;
     }
 }
 
-.form-item__radio {
-    display: none;
-  }
-  
+
 .form-item__radio-label {
     cursor: pointer;
     display: inline-block;
@@ -1275,7 +1323,7 @@ body.fixed{
 .form-item__radio-label::before {
     -webkit-transform: translateY(-50%);
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.16);
+    border: 1px solid #707070;
     border-radius: 50%;
     content: "";
     display: block;
@@ -1285,6 +1333,7 @@ body.fixed{
     top: 50%;
     transform: translateY(-50%);
     width: 12px;
+    transition: all .3s;
 }
 
 .form-item__radio-label::after {
@@ -1303,6 +1352,15 @@ body.fixed{
     transition: all 0.3s ease 0s;
     width: 6px;
 }
+
+.form-item__radio {
+    display: none;
+
+    &:focus + .form-item__radio-label::before{
+        background: #000;
+    }
+  }
+  
 
 .form-item__radio:checked + .form-item__radio-label::after {
 opacity: 1;
@@ -1323,6 +1381,12 @@ opacity: 1;
     height: 200px;
     display: block;
     border: 1px solid #707070;
+    transition: all .3s;
+
+    &:hover,&:focus{
+        border: 1px solid #4973FF;
+        box-shadow: 0px 0px 8pt 0px#4973FF80;
+    }
 
     @include mq('sp'){
         height: 160px;
@@ -1364,6 +1428,7 @@ opacity: 1;
         height: 20px;
         background: #fff;
         border: 1px solid #707070;
+        transition: all .3s;
 
         @include mq('sp'){
             width: 18px;
@@ -1387,6 +1452,23 @@ opacity: 1;
         transition: all 0.3s ease 0s;
         width: 14px;
     }
+
+    &:active::before{
+        background: #4973FF33;
+    }
+
+    &:hover::before{
+        border: 1px solid #4973FF;
+    }
+}
+
+
+// inputの背景色の無効化
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 
@@ -1405,6 +1487,12 @@ opacity: 1;
     font-size: 1.125em;
     text-align: center;
     color: #ff0000;
+}
+
+.form__button:disabled{
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #fff;
 }
 
 // =======================
@@ -1454,7 +1542,12 @@ opacity: 1;
 }
 
 .footer__sns-link{
+    transition: all .3s;
     display: block;
+
+    &:hover{
+        opacity: .7;
+    }
 }
 
 .footer__sns-icon{
@@ -1482,6 +1575,11 @@ opacity: 1;
 }
 
 .footer__link{
+    transition: all .3s;
+
+    &:hover{
+        opacity: .7;
+    }
 
     @include mq('sp'){
         font-size: 0.875em;
