@@ -138,6 +138,10 @@ $breakpoints: (
     line-height: 1.4;
     padding: 0.75em 2.8em;
     letter-spacing: 0.45px;
+
+    @include mq('sp'){
+        font-size: 1em;
+    }
 }
 
 .button--bg_primary{

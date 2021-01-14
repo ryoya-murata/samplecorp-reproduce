@@ -110,6 +110,12 @@ img {
   letter-spacing: 0.45px;
 }
 
+@media screen and (max-width: 767px) {
+  .button--small {
+    font-size: 1em;
+  }
+}
+
 .button--bg_primary {
   background: #3E3E3E;
   color: #fff;
