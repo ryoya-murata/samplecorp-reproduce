@@ -568,6 +568,7 @@ body.fixed{
 }
 
 .news-item__heads{
+    flex: 0 1 260px;
     display: flex;
     align-items: center;
     margin-right: 2.5em;
@@ -576,20 +577,31 @@ body.fixed{
         margin-bottom: 0.75em;
         margin-right: 0;
     }
+
+    @media all and (-ms-high-contrast: none) {
+        width: 260px;
+      }
 }
 
 .news-item__time-wrapper{
+    flex: 0 1 100px;
     width: 100px;
     margin-right: 2.5em;
 
     @include mq('sp'){
         margin-right: 1.5em;
     }
+
+    @media all and (-ms-high-contrast: none) {
+        margin-right: 1em;
+    }
+
+    
 }
 
 .news-item__time{
     font-size: 1.125em;
-    display: block;
+    display: inline-block;
     letter-spacing: 0.45px;
 
     @include mq('sp'){
@@ -598,6 +610,7 @@ body.fixed{
 }
 
 .news-item__title{
+    flex: 0 1 120px;
     width: 120px;
     font-size: 0.875em;
     text-align: center;
@@ -608,16 +621,26 @@ body.fixed{
     @include mq('sp'){
         font-size: 0.75em;
     }
+
+    @media all and (-ms-high-contrast: none) {
+        line-height: 1;
+        padding: 0.3em .5em 0.15em;
+    }
 }
 
 .news-item__content{
-    flex: 0 2 calc(100% - 260px);
+    flex: 0 2 calc(100% - 260px - 40px);
     font-weight: 1.125em;
 
     @include mq('sp'){
         font-size: 0.875em;
         width: 100%;
     }
+
+    @media all and (-ms-high-contrast: none) {
+        flex: 0 2 70%;
+
+      }
 }
 
 // =======================
@@ -932,6 +955,8 @@ body.fixed{
         flex: 0 1 60px;
         margin-right: 1.25em;
     }
+
+    
 }
 
 .comment-item__img-wrapper{
@@ -952,6 +977,10 @@ body.fixed{
 
     @include mq('sp'){
         flex: 0 1 calc(100% - 80px);
+    }
+
+    @media all and (-ms-high-contrast: none) {
+        flex: 0 2 500px;
     }
 }
 
@@ -1098,6 +1127,10 @@ body.fixed{
         width: 100%;
         margin-bottom: 1.5em;
     }
+
+    @media all and (-ms-high-contrast: none) {
+        flex: 0 2 800px;
+    }
 }
 
 .access__map-wrapper{
@@ -1211,6 +1244,10 @@ body.fixed{
 
 .form-item__input-wrapper{
     flex: 0 1 calc(100% - 188px);
+
+    @media all and (-ms-high-contrast: none) {
+        flex: 0 2 100%;
+    }
 }
 
 .form-item__pull-down{
