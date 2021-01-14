@@ -100,7 +100,6 @@ img {
 @media screen and (max-width: 767px) {
   .button--large {
     font-size: 1.125em;
-    width: 100%;
   }
 }
 
@@ -781,6 +780,12 @@ body.fixed {
 
 .results__button-wrapper {
   padding: 0 1.875em;
+}
+
+@media screen and (max-width: 767px) {
+  .results__button {
+    width: 100%;
+  }
 }
 
 .price__table {

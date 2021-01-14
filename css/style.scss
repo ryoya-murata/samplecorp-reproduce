@@ -130,7 +130,6 @@ $breakpoints: (
 
     @include mq('sp'){
         font-size: 1.125em;
-        width: 100%;
     }
 }
 
@@ -760,6 +759,12 @@ body.fixed{
 
 .results__button-wrapper{
     padding: 0 1.875em;
+}
+
+.results__button{
+    @include mq('sp'){
+        width: 100%;
+    }
 }
 
 // =======================
