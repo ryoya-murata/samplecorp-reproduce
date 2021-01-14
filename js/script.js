@@ -113,6 +113,22 @@ $(document).ready(function () {
 
   });
 
+  $(function(){
+    let $submit = $('#js-submit')
+    $('#form input , #form textarea').on( 'change', function(){
+        if(
+            $( '#form input[name="entry.2080539939"]').val() !== "" &&
+            $( '#form input[name="entry.36658072"]').val() !== "" &&
+            $( '#form input[name="entry.844593496"]').prop('checked') === true
+        ){
+            $submit.prop('disabled', false)
+        } else {
+            $submit.prop('disabled',true)
+        }
+    })
+
+  })
+
 // =======================
 //  totop
 // =======================
