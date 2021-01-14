@@ -312,8 +312,8 @@ img {
 }
 
 .hamberger__line-wrapper.open {
-  -webkit-transform: translateX(-187px);
-          transform: translateX(-187px);
+  -webkit-transform: translateX(-190px);
+          transform: translateX(-190px);
 }
 
 .hamberger__line-wrapper.open .hamberger__line {

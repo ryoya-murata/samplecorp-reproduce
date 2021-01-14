@@ -76,10 +76,10 @@ $(function(){
 
         if(faqIcon.hasClass('selected')){
             faqIcon.removeClass('selected');
-            faqIcon.attr('src', '../img/plus.svg');
+            faqIcon.attr('src', './img/plus.svg');
         } else {
             faqIcon.addClass('selected');
-            faqIcon.attr('src', '../img/minus.svg');
+            faqIcon.attr('src', './img/minus.svg');
         }
     })
 })
