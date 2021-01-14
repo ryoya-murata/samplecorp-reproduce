@@ -1298,7 +1298,7 @@ body.fixed {
   -webkit-appearance: none;
   appearance: none;
   background: transparent url(https://haniwaman.com/wp/wp-content/uploads/2018/12/form-css-arrow.png) no-repeat center right 8px/16px 16px;
-  border: 1px solid rgba(0, 0, 0, 0.16);
+  border: 1px solid #707070;
   border-radius: 0;
   color: inherit;
   cursor: pointer;
@@ -1306,6 +1306,8 @@ body.fixed {
   font-size: 1em;
   padding: 0.4em 0.8em;
   width: 178px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 @media screen and (max-width: 767px) {
@@ -1314,8 +1316,13 @@ body.fixed {
   }
 }
 
+.form-item__pull-down:hover {
+  -webkit-box-shadow: 0px 0px 5px  #4973FF80;
+          box-shadow: 0px 0px 5px  #4973FF80;
+}
+
 .form-item__pull-down:focus {
-  border: 1px solid rgba(0, 0, 0, 0.32);
+  border: 1px solid #707070;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
@@ -1331,7 +1338,7 @@ body.fixed {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #fff;
+  background-color: transparent;
   background-image: none;
   color: inherit;
   font-family: inherit;
@@ -1339,6 +1346,14 @@ body.fixed {
   height: 100%;
   display: block;
   border-bottom: 1px solid #CECDCD;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.form-item__input:hover {
+  border-bottom: 1px solid #4973FF;
+  -webkit-box-shadow: 0px 5px 5px -5px #4973FF80;
+          box-shadow: 0px 5px 5px -5px #4973FF80;
 }
 
 .form-item__input::-webkit-input-placeholder {
@@ -1367,12 +1382,16 @@ body.fixed {
   margin-right: 2em;
 }
 
-.form-item__radio-wrapper:last-of-type {
-  margin-right: 0;
+.form-item__radio-wrapper:hover .form-item__radio-label::before {
+  border: 1px solid #4973FF;
 }
 
-.form-item__radio {
-  display: none;
+.form-item__radio-wrapper:active .form-item__radio-label::before {
+  background: #4973FF33;
+}
+
+.form-item__radio-wrapper:last-of-type {
+  margin-right: 0;
 }
 
 .form-item__radio-label {
@@ -1386,7 +1405,7 @@ body.fixed {
 .form-item__radio-label::before {
   -webkit-transform: translateY(-50%);
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.16);
+  border: 1px solid #707070;
   border-radius: 50%;
   content: "";
   display: block;
@@ -1396,6 +1415,8 @@ body.fixed {
   top: 50%;
   transform: translateY(-50%);
   width: 12px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .form-item__radio-label::after {
@@ -1414,6 +1435,14 @@ body.fixed {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   width: 6px;
+}
+
+.form-item__radio {
+  display: none;
+}
+
+.form-item__radio:focus + .form-item__radio-label::before {
+  background: #000;
 }
 
 .form-item__radio:checked + .form-item__radio-label::after {
@@ -1435,6 +1464,14 @@ body.fixed {
   height: 200px;
   display: block;
   border: 1px solid #707070;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.form-item__textarea:hover, .form-item__textarea:focus {
+  border: 1px solid #4973FF;
+  -webkit-box-shadow: 0px 0px 8pt 0px #4973FF80;
+          box-shadow: 0px 0px 8pt 0px #4973FF80;
 }
 
 @media screen and (max-width: 767px) {
@@ -1480,6 +1517,8 @@ body.fixed {
   height: 20px;
   background: #fff;
   border: 1px solid #707070;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 @media screen and (max-width: 767px) {
@@ -1505,6 +1544,21 @@ body.fixed {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   width: 14px;
+}
+
+.form__agree-label:active::before {
+  background: #4973FF33;
+}
+
+.form__agree-label:hover::before {
+  border: 1px solid #4973FF;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .form__end-message {
