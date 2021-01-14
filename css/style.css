@@ -100,7 +100,6 @@ img {
 @media screen and (max-width: 767px) {
   .button--large {
     font-size: 1.125em;
-    width: 100%;
   }
 }
 
@@ -109,6 +108,12 @@ img {
   line-height: 1.4;
   padding: 0.75em 2.8em;
   letter-spacing: 0.45px;
+}
+
+@media screen and (max-width: 767px) {
+  .button--small {
+    font-size: 1em;
+  }
 }
 
 .button--bg_primary {
@@ -404,6 +409,13 @@ body.fixed {
 .top {
   background: url(../img/mv.png) no-repeat center/cover;
   padding: 14em 0 9.5em 0;
+  margin-bottom: 3.75em;
+}
+
+@media screen and (max-width: 767px) {
+  .top {
+    margin-bottom: 0;
+  }
 }
 
 .top__inner {
@@ -457,9 +469,14 @@ body.fixed {
   }
 }
 
+.news {
+  margin-bottom: 3.75em;
+}
+
 @media screen and (max-width: 767px) {
   .news {
     margin-top: -6.25em;
+    margin-bottom: 4.5em;
   }
 }
 
@@ -601,12 +618,14 @@ body.fixed {
 }
 
 .service {
+  margin-bottom: 3.75em;
   background: -webkit-gradient(linear, left top, left bottom, from(#3E3E3E), color-stop(70%, #3E3E3E), color-stop(70%, transparent), to(transparent));
   background: linear-gradient(180deg, #3E3E3E 0%, #3E3E3E 70%, transparent 70%, transparent 100%);
 }
 
 @media screen and (max-width: 767px) {
   .service {
+    margin-bottom: 0.75em;
     background: -webkit-gradient(linear, left top, left bottom, from(#3E3E3E), color-stop(50%, #3E3E3E), color-stop(50%, transparent), to(transparent));
     background: linear-gradient(180deg, #3E3E3E 0%, #3E3E3E 50%, transparent 50%, transparent 100%);
   }
@@ -668,11 +687,13 @@ body.fixed {
 
 .results {
   margin-left: 2.5em;
+  margin-bottom: 3.75em;
 }
 
 @media screen and (max-width: 767px) {
   .results {
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -783,6 +804,18 @@ body.fixed {
   padding: 0 1.875em;
 }
 
+@media screen and (max-width: 767px) {
+  .results__button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .price {
+    padding-bottom: 1.875em;
+  }
+}
+
 .price__table {
   width: 100%;
   table-layout: fixed;
@@ -823,6 +856,40 @@ body.fixed {
 
 .price__desc {
   font-size: 0.75em;
+}
+
+.bg {
+  position: relative;
+}
+
+.bg::after {
+  position: absolute;
+  content: '';
+  width: 76.5625%;
+  top: 9%;
+  bottom: 10%;
+  background: #3E3E3E;
+  z-index: -5;
+}
+
+@media screen and (max-width: 767px) {
+  .bg::after {
+    width: 100%;
+    height: 100%;
+    top: 5%;
+    bottom: 0;
+  }
+}
+
+.comments {
+  margin-bottom: 3.75em;
+}
+
+@media screen and (max-width: 767px) {
+  .comments {
+    padding-top: 1.875em;
+    margin-bottom: 0.75em;
+  }
 }
 
 .comments__wrapper {
@@ -922,6 +989,13 @@ body.fixed {
 .faqs {
   background: url(../img/qa-bg.png) no-repeat center/cover;
   background-attachment: fixed;
+  padding-bottom: 7.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .faqs {
+    padding-bottom: 3.75em;
+  }
 }
 
 .faqs__items {
@@ -935,16 +1009,23 @@ body.fixed {
   }
 }
 
-.faq-item {
+.faqs__item {
   margin-bottom: 2em;
-  background: #fff;
-  border-radius: 4px;
+}
+
+.faqs__item:last-of-type {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 767px) {
-  .faq-item {
+  .faqs__item {
     margin-bottom: 1.5em;
   }
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 4px;
 }
 
 .faq-item__question-wrapper {
@@ -997,6 +1078,18 @@ body.fixed {
   border-radius: 4px;
 }
 
+.access {
+  padding-top: 7.5em;
+  margin-bottom: 3.75em;
+}
+
+@media screen and (max-width: 767px) {
+  .access {
+    padding-top: 2.5em;
+    margin-bottom: 0.75em;
+  }
+}
+
 .access__contents-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1014,9 +1107,9 @@ body.fixed {
 
 .access__contents {
   -webkit-box-flex: 0;
-      -ms-flex: 0 2 36%;
-          flex: 0 2 36%;
-  margin-right: 3.5%;
+      -ms-flex: 0 1 420px;
+          flex: 0 1 420px;
+  margin-right: 1%;
   padding-left: 60px;
   color: #fff;
 }
@@ -1029,10 +1122,14 @@ body.fixed {
   }
 }
 
+.access__address {
+  margin-bottom: 2em;
+}
+
 .access__map-container {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 60.5%;
-          flex: 0 1 60.5%;
+      -ms-flex: 0 1 calc(100% - 420px - 1%);
+          flex: 0 1 calc(100% - 420px - 1%);
 }
 
 @media screen and (max-width: 767px) {
@@ -1044,7 +1141,7 @@ body.fixed {
 
 .access__map-wrapper {
   position: relative;
-  padding-top: 71.63%;
+  padding-top: 520px;
   width: 100%;
   height: 100%;
 }
@@ -1067,6 +1164,12 @@ body.fixed {
 .contact {
   background: url(../img/contact-bg.png) no-repeat center/cover;
   padding: 3.75em 0;
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 2.5em 0;
+  }
 }
 
 .form__heading {

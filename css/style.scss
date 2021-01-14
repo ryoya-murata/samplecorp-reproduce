@@ -130,7 +130,6 @@ $breakpoints: (
 
     @include mq('sp'){
         font-size: 1.125em;
-        width: 100%;
     }
 }
 
@@ -139,6 +138,10 @@ $breakpoints: (
     line-height: 1.4;
     padding: 0.75em 2.8em;
     letter-spacing: 0.45px;
+
+    @include mq('sp'){
+        font-size: 1em;
+    }
 }
 
 .button--bg_primary{
@@ -420,6 +423,11 @@ body.fixed{
 .top{
     background: url(../img/mv.png) no-repeat center / cover;
     padding: 14em 0 9.5em 0;
+    margin-bottom: 3.75em;
+
+    @include mq('sp'){
+        margin-bottom: 0;
+    }
 }
 
 .top__inner{
@@ -469,9 +477,11 @@ body.fixed{
 // =======================
 
 .news{
+    margin-bottom: 3.75em;
 
     @include mq('sp'){
         margin-top: -6.25em;
+        margin-bottom: 4.5em;
     }
 }
 
@@ -589,10 +599,12 @@ body.fixed{
 // =======================
 
 .service{
+    margin-bottom: 3.75em;
     background:linear-gradient(180deg, $primary-color 0%,$primary-color 70%,transparent 70%,transparent 100%);
 
     @include mq('sp'){
-    background:linear-gradient(180deg, $primary-color 0%,$primary-color 50%,transparent 50%,transparent 100%);
+        margin-bottom: 0.75em;
+        background:linear-gradient(180deg, $primary-color 0%,$primary-color 50%,transparent 50%,transparent 100%);
     }
 }
 
@@ -656,9 +668,11 @@ body.fixed{
 
 .results{
     margin-left: 2.5em;
+    margin-bottom: 3.75em;
 
     @include mq('sp'){
         margin-left: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -762,9 +776,21 @@ body.fixed{
     padding: 0 1.875em;
 }
 
+.results__button{
+    @include mq('sp'){
+        width: 100%;
+    }
+}
+
 // =======================
 //  price
 // =======================
+
+.price{
+    @include mq('sp'){
+        padding-bottom: 1.875em;
+    }
+}
 
 .price__table{
     width: 100%;
@@ -807,6 +833,36 @@ body.fixed{
 // =======================
 //  comments
 // =======================
+
+.bg{
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: '';
+        width: 76.5625%;
+        top: 9%;
+        bottom: 10%;
+        background: $primary-color;
+        z-index: -5;
+
+        @include mq('sp'){
+            width: 100%;
+            height: 100%;
+            top: 5%;
+            bottom: 0;
+        }
+    }
+}
+
+.comments{
+    margin-bottom: 3.75em;
+
+    @include mq('sp'){
+        padding-top: 1.875em;
+        margin-bottom: 0.75em;
+    }
+}
 
 .comments__wrapper{
     display: flex;
@@ -881,6 +937,11 @@ body.fixed{
 .faqs{
     background: url(../img/qa-bg.png) no-repeat center /cover;
     background-attachment: fixed;
+    padding-bottom: 7.5em;
+
+    @include mq('sp'){
+        padding-bottom: 3.75em;
+    }
 }
 
 .faqs__items{
@@ -892,14 +953,22 @@ body.fixed{
     }
 }
 
-.faq-item{
+.faqs__item{
     margin-bottom: 2em;
-    background: #fff;
-    border-radius: 4px;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
 
     @include mq('sp'){
         margin-bottom: 1.5em;
     }
+}
+
+.faq-item{
+    background: #fff;
+    border-radius: 4px;
+
 }
 
 .faq-item__question-wrapper{
@@ -957,6 +1026,13 @@ body.fixed{
 // =======================
 
 .access{
+    padding-top: 7.5em;
+    margin-bottom: 3.75em;
+
+    @include mq('sp'){
+        padding-top: 2.5em;
+        margin-bottom: 0.75em;
+    }
 }
 
 .access__contents-wrapper{
@@ -969,8 +1045,8 @@ body.fixed{
 }
 
 .access__contents{
-    flex: 0 2 36%;
-    margin-right: 3.5%;
+    flex: 0 1 420px;
+    margin-right: 1%;
     padding-left: 60px;
     color: #fff;
 
@@ -981,8 +1057,12 @@ body.fixed{
     }
 }
 
+.access__address{
+    margin-bottom: 2em;
+}
+
 .access__map-container{
-    flex: 0 1 60.5%;
+    flex: 0 1 calc(100% - 420px - 1%);
 
     @include mq('sp'){
         width: 100%;
@@ -992,7 +1072,7 @@ body.fixed{
 
 .access__map-wrapper{
     position: relative;
-    padding-top: 71.63%;
+    padding-top: 520px;
     width: 100%;
     height: 100%;
 
@@ -1017,6 +1097,10 @@ body.fixed{
 .contact{
     background: url(../img/contact-bg.png) no-repeat center / cover;
     padding: 3.75em 0;
+
+    @include mq('sp'){
+        padding: 2.5em 0;
+    }
 }
 
 .form{
