@@ -278,12 +278,13 @@ img {
 }
 
 .hamberger__line-wrapper.open {
-  -webkit-transform: translateX(-190px);
-          transform: translateX(-190px);
+  -webkit-transform: translateX(-187px);
+          transform: translateX(-187px);
 }
 
 .hamberger__line-wrapper.open .hamberger__line {
   background-color: #fff;
+  z-index: 500;
 }
 
 .hamberger__line {
@@ -392,7 +393,7 @@ img {
 
 .overlay.open {
   opacity: .8;
-  z-index: 150;
+  z-index: 10;
 }
 
 body.fixed {
