@@ -39,6 +39,32 @@ $(function () {
 
 
 // ===========
+// results
+// ===========
+
+
+var mySwiper = new Swiper('.swiper-container', {
+  slidesPerView: 1.3,
+  spaceBetween: 20,
+  initialSlide: 0,
+  loop: true,
+  pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+  },
+  breakpoints:{
+    768:{
+      slidesPerView: 1.8,
+      },
+      1050:{
+          slidesPerView: 2.8,
+          spaceBetween: 40,
+      }
+  }
+});
+
+// ===========
 // faqs
 // ===========
 
