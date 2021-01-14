@@ -409,6 +409,13 @@ body.fixed {
 .top {
   background: url(../img/mv.png) no-repeat center/cover;
   padding: 14em 0 9.5em 0;
+  margin-bottom: 3.75em;
+}
+
+@media screen and (max-width: 767px) {
+  .top {
+    margin-bottom: 0;
+  }
 }
 
 .top__inner {
@@ -462,9 +469,14 @@ body.fixed {
   }
 }
 
+.news {
+  margin-bottom: 3.75em;
+}
+
 @media screen and (max-width: 767px) {
   .news {
     margin-top: -6.25em;
+    margin-bottom: 4.5em;
   }
 }
 
@@ -606,12 +618,14 @@ body.fixed {
 }
 
 .service {
+  margin-bottom: 3.75em;
   background: -webkit-gradient(linear, left top, left bottom, from(#3E3E3E), color-stop(70%, #3E3E3E), color-stop(70%, transparent), to(transparent));
   background: linear-gradient(180deg, #3E3E3E 0%, #3E3E3E 70%, transparent 70%, transparent 100%);
 }
 
 @media screen and (max-width: 767px) {
   .service {
+    margin-bottom: 0.75em;
     background: -webkit-gradient(linear, left top, left bottom, from(#3E3E3E), color-stop(50%, #3E3E3E), color-stop(50%, transparent), to(transparent));
     background: linear-gradient(180deg, #3E3E3E 0%, #3E3E3E 50%, transparent 50%, transparent 100%);
   }
@@ -673,11 +687,13 @@ body.fixed {
 
 .results {
   margin-left: 2.5em;
+  margin-bottom: 3.75em;
 }
 
 @media screen and (max-width: 767px) {
   .results {
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -794,6 +810,12 @@ body.fixed {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .price {
+    padding-bottom: 1.875em;
+  }
+}
+
 .price__table {
   width: 100%;
   table-layout: fixed;
@@ -853,8 +875,20 @@ body.fixed {
 @media screen and (max-width: 767px) {
   .bg::after {
     width: 100%;
+    height: 100%;
     top: 5%;
     bottom: 0;
+  }
+}
+
+.comments {
+  margin-bottom: 3.75em;
+}
+
+@media screen and (max-width: 767px) {
+  .comments {
+    padding-top: 1.875em;
+    margin-bottom: 0.75em;
   }
 }
 
@@ -955,6 +989,13 @@ body.fixed {
 .faqs {
   background: url(../img/qa-bg.png) no-repeat center/cover;
   background-attachment: fixed;
+  padding-bottom: 7.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .faqs {
+    padding-bottom: 3.75em;
+  }
 }
 
 .faqs__items {
@@ -968,16 +1009,23 @@ body.fixed {
   }
 }
 
-.faq-item {
+.faqs__item {
   margin-bottom: 2em;
-  background: #fff;
-  border-radius: 4px;
+}
+
+.faqs__item:last-of-type {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 767px) {
-  .faq-item {
+  .faqs__item {
     margin-bottom: 1.5em;
   }
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 4px;
 }
 
 .faq-item__question-wrapper {
@@ -1028,6 +1076,18 @@ body.fixed {
   padding: 1em;
   background: #3B69FF33;
   border-radius: 4px;
+}
+
+.access {
+  padding-top: 7.5em;
+  margin-bottom: 3.75em;
+}
+
+@media screen and (max-width: 767px) {
+  .access {
+    padding-top: 2.5em;
+    margin-bottom: 0.75em;
+  }
 }
 
 .access__contents-wrapper {
@@ -1104,6 +1164,12 @@ body.fixed {
 .contact {
   background: url(../img/contact-bg.png) no-repeat center/cover;
   padding: 3.75em 0;
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 2.5em 0;
+  }
 }
 
 .form__heading {
