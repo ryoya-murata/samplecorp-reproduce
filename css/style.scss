@@ -1542,7 +1542,12 @@ input:-webkit-autofill:active  {
 }
 
 .footer__sns-link{
+    transition: all .3s;
     display: block;
+
+    &:hover{
+        opacity: .7;
+    }
 }
 
 .footer__sns-icon{
@@ -1570,6 +1575,11 @@ input:-webkit-autofill:active  {
 }
 
 .footer__link{
+    transition: all .3s;
+
+    &:hover{
+        opacity: .7;
+    }
 
     @include mq('sp'){
         font-size: 0.875em;

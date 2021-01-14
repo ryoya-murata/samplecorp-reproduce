@@ -1644,7 +1644,13 @@ input:-webkit-autofill:active {
 }
 
 .footer__sns-link {
+  -webkit-transition: all .3s;
+  transition: all .3s;
   display: block;
+}
+
+.footer__sns-link:hover {
+  opacity: .7;
 }
 
 .footer__sns-icon {
@@ -1670,6 +1676,15 @@ input:-webkit-autofill:active {
   .footer__item {
     margin-bottom: 1.25em;
   }
+}
+
+.footer__link {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.footer__link:hover {
+  opacity: .7;
 }
 
 @media screen and (max-width: 767px) {
