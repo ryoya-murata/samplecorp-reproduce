@@ -245,6 +245,14 @@ img {
   line-height: 1.1875;
   letter-spacing: -0.4px;
   font-weight: bold;
+  border: 1px solid transparent;
+  padding-bottom: 0.8px;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.header__link:hover {
+  border-bottom: 1px solid #3E3E3E;
 }
 
 .header__link--first-letter_big {
