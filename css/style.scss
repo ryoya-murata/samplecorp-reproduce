@@ -351,6 +351,7 @@ $layer: (
     background-color: $primary-color;
     transition: all .5s;
     border-radius: 5px;
+
 }
 
 .hamberger__line:nth-of-type(1) {
@@ -966,6 +967,7 @@ body.fixed{
 
     @include mq('sp'){
         padding-bottom: 3.75em;
+        background-attachment: scroll;
     }
 }
 
