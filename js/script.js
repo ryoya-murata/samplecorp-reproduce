@@ -44,8 +44,8 @@ $(function () {
 
 
 var mySwiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
-  spaceBetween: 40,
+  slidesPerView: 1.3,
+  spaceBetween: 20,
   initialSlide: 0,
   loop: true,
   pagination: {
@@ -54,8 +54,12 @@ var mySwiper = new Swiper('.swiper-container', {
       clickable: true,
   },
   breakpoints:{
-      767:{
+    768:{
+      slidesPerView: 1.8,
+      },
+      1050:{
           slidesPerView: 2.8,
+          spaceBetween: 40,
       }
   }
 });

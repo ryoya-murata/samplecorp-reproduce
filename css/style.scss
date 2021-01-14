@@ -58,7 +58,6 @@ $breakpoints: (
 
 .section{
     padding: 3.75em 0;
-    width: 100%;
 
     @include mq('sp'){
         padding: 3em 0;
@@ -131,6 +130,7 @@ $breakpoints: (
 
     @include mq('sp'){
         font-size: 1.125em;
+        width: 100%;
     }
 }
 
@@ -655,15 +655,34 @@ body.fixed{
 
 .results{
     margin-left: 2.5em;
+
+    @include mq('sp'){
+        margin-left: 0;
+    }
 }
 
 .results__inner{
+    box-sizing: content-box;
     background-color: $primary-color;
     padding: 3.75em 0 3.75em 3.75em;
+
+    @include mq('sp'){
+        padding: 2.5em 0 2.5em 1em;
+    }
+}
+
+.results__title{
+    @include mq('sp'){
+        text-align: center;
+    }
 }
 
 .result-items__wrapper{
     margin-bottom: 2.5em;
+
+    @include mq('sp'){
+        margin-bottom: 1.5em;
+    }
 }
 
 .result-item__link{
@@ -679,16 +698,35 @@ body.fixed{
     font-size: 1.25em;
     font-weight: bold;
     margin-bottom: 0.55em;
+
+    @include mq('sp'){
+        font-size: 0.875em;
+        margin-bottom: 0.7em;
+    }
 }
 
-.results__pagination{
-    margin-bottom: 2.5em;
+.result-item__desc{
+
+    @include mq('sp'){
+        font-size: 0.75em;
+    }
 }
 
 .swiper-pagination{
     position: static;
     text-align: left;
 }
+
+
+.results__pagination{
+    margin-bottom: 2.5em;
+
+    @include mq('sp'){
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+}
+
 
 .swiper-pagination-bullet{
     width: 12px;
@@ -717,6 +755,10 @@ body.fixed{
     height: 20px;
     border: 1px solid #fff;
     border-radius: 50%;
+}
+
+.results__button-wrapper{
+    padding: 0 1.875em;
 }
 
 // =======================

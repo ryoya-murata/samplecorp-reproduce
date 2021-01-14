@@ -22,7 +22,6 @@ img {
 
 .section {
   padding: 3.75em 0;
-  width: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -101,6 +100,7 @@ img {
 @media screen and (max-width: 767px) {
   .button--large {
     font-size: 1.125em;
+    width: 100%;
   }
 }
 
@@ -669,13 +669,39 @@ body.fixed {
   margin-left: 2.5em;
 }
 
+@media screen and (max-width: 767px) {
+  .results {
+    margin-left: 0;
+  }
+}
+
 .results__inner {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   background-color: #3E3E3E;
   padding: 3.75em 0 3.75em 3.75em;
 }
 
+@media screen and (max-width: 767px) {
+  .results__inner {
+    padding: 2.5em 0 2.5em 1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .results__title {
+    text-align: center;
+  }
+}
+
 .result-items__wrapper {
   margin-bottom: 2.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .result-items__wrapper {
+    margin-bottom: 1.5em;
+  }
 }
 
 .result-item__link {
@@ -693,13 +719,33 @@ body.fixed {
   margin-bottom: 0.55em;
 }
 
-.results__pagination {
-  margin-bottom: 2.5em;
+@media screen and (max-width: 767px) {
+  .result-item__title {
+    font-size: 0.875em;
+    margin-bottom: 0.7em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .result-item__desc {
+    font-size: 0.75em;
+  }
 }
 
 .swiper-pagination {
   position: static;
   text-align: left;
+}
+
+.results__pagination {
+  margin-bottom: 2.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .results__pagination {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -730,6 +776,10 @@ body.fixed {
   height: 20px;
   border: 1px solid #fff;
   border-radius: 50%;
+}
+
+.results__button-wrapper {
+  padding: 0 1.875em;
 }
 
 .price__table {
