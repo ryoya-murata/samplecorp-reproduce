@@ -304,10 +304,11 @@ $layer: (
     transition: transform .5s;
 
     &.open{
-        transform: translateX(-190px);
+        transform: translateX(-187px);
 
         .hamberger__line{
             background-color: #fff;
+            z-index: 500;
         }
     }
 }
@@ -400,7 +401,7 @@ $layer: (
 
 .overlay.open{
     opacity: .8;
-    z-index: 150;
+    z-index: 10;
 }
 
 
