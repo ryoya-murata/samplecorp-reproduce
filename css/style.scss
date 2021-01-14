@@ -799,7 +799,10 @@ body.fixed{
 }
 
 .results__button-wrapper{
-    padding: 0 1.875em;
+
+    @include mq('sp'){
+        padding: 0 1.875em;
+    }
 }
 
 .results__button{
