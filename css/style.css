@@ -120,6 +120,14 @@ img {
   background: #3E3E3E;
   color: #fff;
   border: 1px solid #FFFFFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button--bg_primary:hover {
+  background: #fff;
+  color: #3E3E3E;
+  border: 1px solid #707070;
 }
 
 .button--bg_yellow {
@@ -127,12 +135,25 @@ img {
   color: #fff;
   -webkit-box-shadow: 0px 3px 5px #3E3E3E33;
           box-shadow: 0px 3px 5px #3E3E3E33;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button--bg_yellow:hover {
+  background: #F18900;
 }
 
 .button--color_primary {
   background: #fff;
   color: #3E3E3E;
   border: 1px solid #3E3E3E;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button--color_primary:hover {
+  color: #fff;
+  background: #3E3E3E;
 }
 
 .button--border_radius {
