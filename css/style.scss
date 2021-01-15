@@ -569,7 +569,7 @@ body.fixed{
 }
 
 .news-item__heads{
-    flex: 0 1 260px;
+    flex: 0 0 260px;
     display: flex;
     align-items: center;
     margin-right: 2.5em;
@@ -585,7 +585,7 @@ body.fixed{
 }
 
 .news-item__time-wrapper{
-    flex: 0 1 100px;
+    flex: 0 0 100px;
     width: 100px;
     margin-right: 2.5em;
 
@@ -611,7 +611,7 @@ body.fixed{
 }
 
 .news-item__title{
-    flex: 0 1 120px;
+    flex: 0 0 120px;
     width: 120px;
     font-size: 0.875em;
     text-align: center;
@@ -630,7 +630,7 @@ body.fixed{
 }
 
 .news-item__content{
-    flex: 0 2 calc(100% - 260px - 40px);
+    flex: 0 1 calc(100% - 260px - 40px);
     font-weight: 1.125em;
 
     @include mq('sp'){
