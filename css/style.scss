@@ -1692,6 +1692,7 @@ input:-webkit-autofill:active  {
     right: 2.5em;
     bottom: 2.5em;
     cursor: pointer;
+    z-index: 400;
 
     @include mq('sp'){
         right: 1em;
