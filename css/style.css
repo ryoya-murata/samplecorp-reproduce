@@ -1199,9 +1199,9 @@ body.fixed {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 314px;
-          flex: 0 0 314px;
-  margin-right: 100px;
+      -ms-flex: 0 2 314px;
+          flex: 0 2 314px;
+  margin-right: 7.8%;
   padding-left: 60px;
   color: #fff;
 }
@@ -1226,8 +1226,8 @@ body.fixed {
 
 .access__map-container {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(100% - 374px - 100px);
-          flex: 0 1 calc(100% - 374px - 100px);
+      -ms-flex: 0 1 calc(100% - 7.8% - 314px);
+          flex: 0 1 calc(100% - 7.8% - 314px);
 }
 
 @media screen and (max-width: 767px) {
