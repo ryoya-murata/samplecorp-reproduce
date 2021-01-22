@@ -1698,7 +1698,7 @@ input:-webkit-autofill:active {
 .footer__inner {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  padding: 0 1em;
+  padding: 0 2.5em;
   margin: 0 auto;
   max-width: 960px;
 }
