@@ -40,6 +40,7 @@ $inner-width-small: 960px;
 
 
 $breakpoints: (
+    "lg": "screen and (max-width: 1024px)",
   "sp": "screen and (max-width: 767px)",
   "pc": "screen and (min-width: 768px)"
 );
@@ -1117,10 +1118,14 @@ body.fixed{
 
 .access__contents{
     box-sizing: content-box;
-    flex: 0 2 314px;
-    margin-right: 7.8%;
+    flex: 0 1 29.5%;
+    margin-right: 8.3333%;
     padding-left: 60px;
     color: #fff;
+
+    @include mq("lg"){
+        margin-right: 5%;
+    }
 
     @include mq('sp'){
         padding-left: 0;
@@ -1140,7 +1145,11 @@ body.fixed{
 }
 
 .access__map-container{
-    flex: 0 1 calc(100% - 7.8% - 314px);
+    flex: 0 1 60.5%;
+
+    @include mq("lg"){
+        flex: 0 1 65.5%;
+    }
 
     @include mq('sp'){
         width: 100%;
@@ -1584,6 +1593,9 @@ input:-webkit-autofill:active  {
     margin: 0 auto;
     max-width: 960px;
 
+    @include mq("lg"){
+        max-width: 720px;
+    }
     
 }
 
